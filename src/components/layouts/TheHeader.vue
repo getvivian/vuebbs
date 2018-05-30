@@ -22,14 +22,17 @@
             <a href="#" @click="changeNavIndex(index)">{{ item }}</a>
           </li>
         </ul>
+
+        <div class="navbar-right">
+          <TheEntry/>
+        </div>
       </div>
-
-
     </div>
   </div>
 </template>
 
 <script>
+  import TheEntry from "@/components/layouts/TheEntry"
   export default {
     name: 'TheHeader',
     data() {
@@ -55,6 +58,9 @@
           this.showCollapsedNav =!this.showCollapsedNav;
        }
 
+    },
+    components:{
+      TheEntry
     }
 
   }
